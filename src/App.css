@@ -1,5 +1,29 @@
+body {
+    font-family: "ProximaNova",helvetica,arial,sans-serif;
+    color: #000;
+    font-size: 62.5%;
+}
+#product-title{
+    text-transform: uppercase;
+    flex: 1 1 100%;
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#product-image{
+    max-width: 100%;
+}
 #product-page{
     padding: 10px;
+    font-size: 1.4em;
+    line-height: 1.8em;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 #build-kit-selector{
@@ -8,8 +32,71 @@
 
 #build-kit-details{
     margin-top: 50px;
+    margin-right: 30px;
+    font-size: 0.9em;
+}
+
+#build-kit-info{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #eaeaea;
+    color: #252525;
+    padding: 10px;
+    border-top: 2px solid #e5001c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title{
+    margin: 0;
+}
+
+#build-kit-details-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border: 1px solid #eaeaea;
 }
 
 .build-kit-list-item{
-    margin: 5px;
+    padding: 10px;
 }
+
+.build-kit-list-item:nth-child(odd){
+    background-color: #eaeaea;
+}
+
+.build-kit-list-item .list-item-label{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.build-kit-list-item .list-item-value{
+    font-size: 0.9em;
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    #product-page{
+        padding: 10px;
+        display: flex;
+        flex-flow: wrap;
+    }
+    
+    #product-info{
+        flex: 1 1 75%;
+        order: 2;
+    }
+    
+    .build-kits{
+        flex: 1 1 25%;
+        order: 1;
+    }
+    
+  }

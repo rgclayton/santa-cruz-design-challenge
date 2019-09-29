@@ -54,7 +54,7 @@ export default class App extends React.Component {
     return (
       <>
         <div id='build-kit-info'>
-          {`${kit.name}`}
+          <h3 class="title">{`${kit.name}`}</h3>
         </div>
         <ul id='build-kit-details-list'>
           {kit.details.map(detail => {
@@ -73,9 +73,11 @@ export default class App extends React.Component {
 
     return (
       <div id='product-page'>
+        <h1 id='product-title'>Tallboy</h1>
         <div id='product-info'>
-          <h1 id='product-title'>Tallboy</h1>
+          <div class="product-image-container">
           <img id='product-image' src='https://www.santacruzbicycles.com/files/styles/scb_crop_520_333/public/frame/thumbs/storm_thumb.jpg?itok=22cJJx21' alt='tallboy'/>
+          </div>          
           <div className='product-description'>
             {ProductCopy}
           </div>
